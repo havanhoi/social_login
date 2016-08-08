@@ -1,0 +1,38 @@
+{
+  "project_info": {
+    "project_number": "794463747839",
+    "project_id": "sincere-burner-732"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:794463747839:android:1c06ff5dccee3703",
+        "android_client_info": {
+          "package_name": "com.earlystart.android.monkeyjunior"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6Q4-QGcyMkXnknZPIYsOO21ZUGs0wixI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 2,
+          "analytics_property": {
+            "tracking_id": "UA-56817305-1"
+          }
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

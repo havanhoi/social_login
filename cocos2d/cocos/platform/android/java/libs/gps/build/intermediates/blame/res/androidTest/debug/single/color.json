@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "/Users/anhmantk/cocos2d-x/mjdemo/cocos2d/cocos/platform/android/java/libs/gps/build/intermediates/res/merged/androidTest/debug/color/wallet_primary_text_holo_light.xml",
+        "source": "/Users/anhmantk/cocos2d-x/mjdemo/cocos2d/cocos/platform/android/java/libs/gps/build/intermediates/bundles/debug/res/color/wallet_primary_text_holo_light.xml"
+    },
+    {
+        "merged": "/Users/anhmantk/cocos2d-x/mjdemo/cocos2d/cocos/platform/android/java/libs/gps/build/intermediates/res/merged/androidTest/debug/color/common_plus_signin_btn_text_light.xml",
+        "source": "/Users/anhmantk/cocos2d-x/mjdemo/cocos2d/cocos/platform/android/java/libs/gps/build/intermediates/bundles/debug/res/color/common_plus_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "/Users/anhmantk/cocos2d-x/mjdemo/cocos2d/cocos/platform/android/java/libs/gps/build/intermediates/res/merged/androidTest/debug/color/wallet_secondary_text_holo_dark.xml",
+        "source": "/Users/anhmantk/cocos2d-x/mjdemo/cocos2d/cocos/platform/android/java/libs/gps/build/intermediates/bundles/debug/res/color/wallet_secondary_text_holo_dark.xml"
+    },
+    {
+        "merged": "/Users/anhmantk/cocos2d-x/mjdemo/cocos2d/cocos/platform/android/java/libs/gps/build/intermediates/res/merged/androidTest/debug/color/common_google_signin_btn_text_dark.xml",
+        "source": "/Users/anhmantk/cocos2d-x/mjdemo/cocos2d/cocos/platform/android/java/libs/gps/build/intermediates/bundles/debug/res/color/common_google_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "/Users/anhmantk/cocos2d-x/mjdemo/cocos2d/cocos/platform/android/java/libs/gps/build/intermediates/res/merged/androidTest/debug/color/common_plus_signin_btn_text_dark.xml",
+        "source": "/Users/anhmantk/cocos2d-x/mjdemo/cocos2d/cocos/platform/android/java/libs/gps/build/intermediates/bundles/debug/res/color/common_plus_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "/Users/anhmantk/cocos2d-x/mjdemo/cocos2d/cocos/platform/android/java/libs/gps/build/intermediates/res/merged/androidTest/debug/color/common_google_signin_btn_text_light.xml",
+        "source": "/Users/anhmantk/cocos2d-x/mjdemo/cocos2d/cocos/platform/android/java/libs/gps/build/intermediates/bundles/debug/res/color/common_google_signin_btn_text_light.xml"
+    }
+]

@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/anhmantk/cocos2d-x/mjdemo/cocos2d/cocos/platform/android/java/libs/gps/build/intermediates/res/merged/androidTest/debug/drawable-xxxhdpi-v4/powered_by_google_light.png",
+        "source": "/Users/anhmantk/cocos2d-x/mjdemo/cocos2d/cocos/platform/android/java/libs/gps/build/intermediates/bundles/debug/res/drawable-xxxhdpi-v4/powered_by_google_light.png"
+    },
+    {
+        "merged": "/Users/anhmantk/cocos2d-x/mjdemo/cocos2d/cocos/platform/android/java/libs/gps/build/intermediates/res/merged/androidTest/debug/drawable-xxxhdpi-v4/powered_by_google_dark.png",
+        "source": "/Users/anhmantk/cocos2d-x/mjdemo/cocos2d/cocos/platform/android/java/libs/gps/build/intermediates/bundles/debug/res/drawable-xxxhdpi-v4/powered_by_google_dark.png"
+    }
+]
