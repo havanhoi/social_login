@@ -12,15 +12,30 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		35A0DCD21D587AA8008911BD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 35A0DCD11D587AA8008911BD /* GoogleService-Info.plist */; };
+		35A0DCD81D58845B008911BD /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A0DCD71D58845B008911BD /* CoreText.framework */; };
+		35A0DCDA1D5884B5008911BD /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A0DCD91D5884B5008911BD /* CoreMotion.framework */; };
+		35A0DCDC1D5884E8008911BD /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A0DCDB1D5884E8008911BD /* MediaPlayer.framework */; };
+		35A0DCDE1D5884EF008911BD /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A0DCDD1D5884EF008911BD /* GameController.framework */; };
+		35A0DD0D1D588596008911BD /* CHANGELOG.md in Sources */ = {isa = PBXBuildFile; fileRef = 35A0DCFA1D588595008911BD /* CHANGELOG.md */; };
+		35A0DD0E1D588596008911BD /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A0DCFC1D588595008911BD /* GoogleSignIn.framework */; };
+		35A0DD0F1D588596008911BD /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 35A0DCFD1D588595008911BD /* README.md */; };
+		35A0DD101D588596008911BD /* GoogleSignIn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 35A0DCFF1D588595008911BD /* GoogleSignIn.bundle */; };
+		35A0DD1F1D588671008911BD /* GoogleAppUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A0DD151D588671008911BD /* GoogleAppUtilities.framework */; };
+		35A0DD201D588671008911BD /* GoogleAuthUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A0DD181D588671008911BD /* GoogleAuthUtilities.framework */; };
+		35A0DD211D588671008911BD /* GoogleNetworkingUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A0DD1B1D588671008911BD /* GoogleNetworkingUtilities.framework */; };
+		35A0DD221D588671008911BD /* GoogleSymbolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A0DD1E1D588671008911BD /* GoogleSymbolUtilities.framework */; };
+		35A0DD241D58867C008911BD /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A0DD231D58867C008911BD /* SafariServices.framework */; };
+		35A0DD2C1D588757008911BD /* JsonDump.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35A0DD251D588757008911BD /* JsonDump.cpp */; };
+		35A0DD2D1D588757008911BD /* LoginScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35A0DD271D588757008911BD /* LoginScene.cpp */; };
+		35A0DD2E1D588757008911BD /* SocialNetworkSignIn-android.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35A0DD291D588757008911BD /* SocialNetworkSignIn-android.cpp */; };
+		35A0DD2F1D588757008911BD /* SocialNetworkSignIn-ios.mm in Sources */ = {isa = PBXBuildFile; fileRef = 35A0DD2A1D588757008911BD /* SocialNetworkSignIn-ios.mm */; };
+		35A0DD351D588FC6008911BD /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A0DD341D588FC6008911BD /* GoogleUtilities.framework */; };
+		35A0DD371D589071008911BD /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A0DD361D589071008911BD /* AddressBook.framework */; };
+		35A0DD391D5890D7008911BD /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 35A0DD381D5890D7008911BD /* fonts */; };
 		3EACC98F19EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		3EACC99019EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		40EB493C92C8D69367FDC9F0 /* sdkbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 360F4DA29A2970BB4E7D48B2 /* sdkbox.framework */; };
-		46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7619C43A67006E1F66 /* CloseNormal.png */; };
-		46880B7C19C43A67006E1F66 /* CloseNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7619C43A67006E1F66 /* CloseNormal.png */; };
-		46880B7D19C43A67006E1F66 /* CloseSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7719C43A67006E1F66 /* CloseSelected.png */; };
-		46880B7E19C43A67006E1F66 /* CloseSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7719C43A67006E1F66 /* CloseSelected.png */; };
-		46880B8119C43A67006E1F66 /* HelloWorld.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7A19C43A67006E1F66 /* HelloWorld.png */; };
-		46880B8219C43A67006E1F66 /* HelloWorld.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7A19C43A67006E1F66 /* HelloWorld.png */; };
 		46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46880B8419C43A87006E1F66 /* AppDelegate.cpp */; };
 		46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46880B8419C43A87006E1F66 /* AppDelegate.cpp */; };
 		46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */; };
@@ -57,8 +72,6 @@
 		50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF62A117ECD613001EB2F8 /* Icon-50.png */; };
 		521A8E6419F0C34300D177D7 /* Default-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 521A8E6219F0C34300D177D7 /* Default-667h@2x.png */; };
 		521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 521A8E6319F0C34300D177D7 /* Default-736h@3x.png */; };
-		521A8EA919F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
-		521A8EAA19F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
 		52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B47A461A53D09B004E4C60 /* Security.framework */; };
 		651B45BBA8E531C8702F624A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F64023A2C21119AD492053 /* SystemConfiguration.framework */; };
 		6543430380AD288D425D4F1B /* PluginIAP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843447F5BDD64E8352AB41F6 /* PluginIAP.framework */; };
@@ -121,12 +134,33 @@
 		1D6058910D05DD3D006BFB54 /* mjdemo-mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mjdemo-mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		35A0DCD11D587AA8008911BD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "ios/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		35A0DCD71D58845B008911BD /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
+		35A0DCD91D5884B5008911BD /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
+		35A0DCDB1D5884E8008911BD /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/MediaPlayer.framework; sourceTree = DEVELOPER_DIR; };
+		35A0DCDD1D5884EF008911BD /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/GameController.framework; sourceTree = DEVELOPER_DIR; };
+		35A0DCFA1D588595008911BD /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		35A0DCFC1D588595008911BD /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSignIn.framework; sourceTree = "<group>"; };
+		35A0DCFD1D588595008911BD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		35A0DCFF1D588595008911BD /* GoogleSignIn.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleSignIn.bundle; sourceTree = "<group>"; };
+		35A0DD151D588671008911BD /* GoogleAppUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleAppUtilities.framework; sourceTree = "<group>"; };
+		35A0DD181D588671008911BD /* GoogleAuthUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleAuthUtilities.framework; sourceTree = "<group>"; };
+		35A0DD1B1D588671008911BD /* GoogleNetworkingUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleNetworkingUtilities.framework; sourceTree = "<group>"; };
+		35A0DD1E1D588671008911BD /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
+		35A0DD231D58867C008911BD /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/SafariServices.framework; sourceTree = DEVELOPER_DIR; };
+		35A0DD251D588757008911BD /* JsonDump.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JsonDump.cpp; sourceTree = "<group>"; };
+		35A0DD261D588757008911BD /* JsonDump.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonDump.h; sourceTree = "<group>"; };
+		35A0DD271D588757008911BD /* LoginScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LoginScene.cpp; sourceTree = "<group>"; };
+		35A0DD281D588757008911BD /* LoginScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginScene.h; sourceTree = "<group>"; };
+		35A0DD291D588757008911BD /* SocialNetworkSignIn-android.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SocialNetworkSignIn-android.cpp"; sourceTree = "<group>"; };
+		35A0DD2A1D588757008911BD /* SocialNetworkSignIn-ios.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "SocialNetworkSignIn-ios.mm"; sourceTree = "<group>"; };
+		35A0DD2B1D588757008911BD /* SocialNetworkSignIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialNetworkSignIn.h; sourceTree = "<group>"; };
+		35A0DD341D588FC6008911BD /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = "<group>"; };
+		35A0DD361D589071008911BD /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/AddressBook.framework; sourceTree = DEVELOPER_DIR; };
+		35A0DD381D5890D7008911BD /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		360F4DA29A2970BB4E7D48B2 /* sdkbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = sdkbox.framework; sourceTree = SOURCE_ROOT; };
 		3EACC98E19EE6D4300EB3C5E /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 		3FBB45D0B5902ECD725B2FD6 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
-		46880B7619C43A67006E1F66 /* CloseNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseNormal.png; sourceTree = "<group>"; };
-		46880B7719C43A67006E1F66 /* CloseSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseSelected.png; sourceTree = "<group>"; };
-		46880B7A19C43A67006E1F66 /* HelloWorld.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HelloWorld.png; sourceTree = "<group>"; };
 		46880B8419C43A87006E1F66 /* AppDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppDelegate.cpp; sourceTree = "<group>"; };
 		46880B8519C43A87006E1F66 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelloWorldScene.cpp; sourceTree = "<group>"; };
@@ -165,7 +199,6 @@
 		50EF62A117ECD613001EB2F8 /* Icon-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-50.png"; sourceTree = "<group>"; };
 		521A8E6219F0C34300D177D7 /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h@2x.png"; sourceTree = "<group>"; };
 		521A8E6319F0C34300D177D7 /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = "<group>"; };
-		521A8EA819F11F5000D177D7 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		52B47A461A53D09B004E4C60 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		8262943D1AAF051F00CB7CF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		843447F5BDD64E8352AB41F6 /* PluginIAP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PluginIAP.framework; sourceTree = SOURCE_ROOT; };
@@ -187,10 +220,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35A0DD371D589071008911BD /* AddressBook.framework in Frameworks */,
+				35A0DD241D58867C008911BD /* SafariServices.framework in Frameworks */,
+				35A0DCDE1D5884EF008911BD /* GameController.framework in Frameworks */,
+				35A0DCDC1D5884E8008911BD /* MediaPlayer.framework in Frameworks */,
+				35A0DCDA1D5884B5008911BD /* CoreMotion.framework in Frameworks */,
+				35A0DCD81D58845B008911BD /* CoreText.framework in Frameworks */,
+				35A0DD221D588671008911BD /* GoogleSymbolUtilities.framework in Frameworks */,
+				35A0DD351D588FC6008911BD /* GoogleUtilities.framework in Frameworks */,
+				35A0DD201D588671008911BD /* GoogleAuthUtilities.framework in Frameworks */,
+				35A0DD0E1D588596008911BD /* GoogleSignIn.framework in Frameworks */,
 				ED545A7C1B68A1F400C3958E /* libiconv.dylib in Frameworks */,
 				52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */,
 				1AC6FB30180E99EB004C840B /* libcocos2d iOS.a in Frameworks */,
 				D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */,
+				35A0DD211D588671008911BD /* GoogleNetworkingUtilities.framework in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
@@ -204,6 +248,7 @@
 				6543430380AD288D425D4F1B /* PluginIAP.framework in Frameworks */,
 				75EB468CA1739CB0E974C9A2 /* StoreKit.framework in Frameworks */,
 				651B45BBA8E531C8702F624A /* SystemConfiguration.framework in Frameworks */,
+				35A0DD1F1D588671008911BD /* GoogleAppUtilities.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +284,8 @@
 				503AE0FD17EB989F00D1A890 /* Prefix.pch */,
 				503AE0FE17EB989F00D1A890 /* RootViewController.h */,
 				503AE0FF17EB989F00D1A890 /* RootViewController.mm */,
+				35A0DCD11D587AA8008911BD /* GoogleService-Info.plist */,
+				35A0DCDF1D588595008911BD /* Google */,
 			);
 			name = ios;
 			path = Classes;
@@ -280,6 +327,12 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				35A0DD361D589071008911BD /* AddressBook.framework */,
+				35A0DD231D58867C008911BD /* SafariServices.framework */,
+				35A0DCDD1D5884EF008911BD /* GameController.framework */,
+				35A0DCDB1D5884E8008911BD /* MediaPlayer.framework */,
+				35A0DCD91D5884B5008911BD /* CoreMotion.framework */,
+				35A0DCD71D58845B008911BD /* CoreText.framework */,
 				ED545A7D1B68A1FA00C3958E /* libiconv.dylib */,
 				ED545A7B1B68A1F400C3958E /* libiconv.dylib */,
 				8262943D1AAF051F00CB7CF7 /* Security.framework */,
@@ -307,14 +360,132 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		35A0DCDF1D588595008911BD /* Google */ = {
+			isa = PBXGroup;
+			children = (
+				35A0DD321D588FC6008911BD /* GoogleUtilities */,
+				35A0DD131D588671008911BD /* GoogleAppUtilities */,
+				35A0DD161D588671008911BD /* GoogleAuthUtilities */,
+				35A0DD191D588671008911BD /* GoogleNetworkingUtilities */,
+				35A0DD1C1D588671008911BD /* GoogleSymbolUtilities */,
+				35A0DCF91D588595008911BD /* GoogleSignIn */,
+			);
+			name = Google;
+			path = ios/Google;
+			sourceTree = SOURCE_ROOT;
+		};
+		35A0DCF91D588595008911BD /* GoogleSignIn */ = {
+			isa = PBXGroup;
+			children = (
+				35A0DCFA1D588595008911BD /* CHANGELOG.md */,
+				35A0DCFB1D588595008911BD /* Frameworks */,
+				35A0DCFD1D588595008911BD /* README.md */,
+				35A0DCFE1D588595008911BD /* Resources */,
+			);
+			path = GoogleSignIn;
+			sourceTree = "<group>";
+		};
+		35A0DCFB1D588595008911BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				35A0DCFC1D588595008911BD /* GoogleSignIn.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		35A0DCFE1D588595008911BD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				35A0DCFF1D588595008911BD /* GoogleSignIn.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		35A0DD131D588671008911BD /* GoogleAppUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				35A0DD141D588671008911BD /* Frameworks */,
+			);
+			path = GoogleAppUtilities;
+			sourceTree = "<group>";
+		};
+		35A0DD141D588671008911BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				35A0DD151D588671008911BD /* GoogleAppUtilities.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		35A0DD161D588671008911BD /* GoogleAuthUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				35A0DD171D588671008911BD /* Frameworks */,
+			);
+			path = GoogleAuthUtilities;
+			sourceTree = "<group>";
+		};
+		35A0DD171D588671008911BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				35A0DD181D588671008911BD /* GoogleAuthUtilities.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		35A0DD191D588671008911BD /* GoogleNetworkingUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				35A0DD1A1D588671008911BD /* Frameworks */,
+			);
+			path = GoogleNetworkingUtilities;
+			sourceTree = "<group>";
+		};
+		35A0DD1A1D588671008911BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				35A0DD1B1D588671008911BD /* GoogleNetworkingUtilities.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		35A0DD1C1D588671008911BD /* GoogleSymbolUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				35A0DD1D1D588671008911BD /* Frameworks */,
+			);
+			path = GoogleSymbolUtilities;
+			sourceTree = "<group>";
+		};
+		35A0DD1D1D588671008911BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				35A0DD1E1D588671008911BD /* GoogleSymbolUtilities.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		35A0DD321D588FC6008911BD /* GoogleUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				35A0DD331D588FC6008911BD /* Frameworks */,
+			);
+			path = GoogleUtilities;
+			sourceTree = "<group>";
+		};
+		35A0DD331D588FC6008911BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				35A0DD341D588FC6008911BD /* GoogleUtilities.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				521A8EA819F11F5000D177D7 /* fonts */,
+				35A0DD381D5890D7008911BD /* fonts */,
 				3EACC98E19EE6D4300EB3C5E /* res */,
-				46880B7619C43A67006E1F66 /* CloseNormal.png */,
-				46880B7719C43A67006E1F66 /* CloseSelected.png */,
-				46880B7A19C43A67006E1F66 /* HelloWorld.png */,
 				FB3B4FB19B056A935DB95D90 /* sdkbox_config.json */,
 			);
 			name = Resources;
@@ -324,10 +495,17 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				46880B8419C43A87006E1F66 /* AppDelegate.cpp */,
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
+				46880B8419C43A87006E1F66 /* AppDelegate.cpp */,
 				46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */,
 				46880B8719C43A87006E1F66 /* HelloWorldScene.h */,
+				35A0DD251D588757008911BD /* JsonDump.cpp */,
+				35A0DD261D588757008911BD /* JsonDump.h */,
+				35A0DD281D588757008911BD /* LoginScene.h */,
+				35A0DD271D588757008911BD /* LoginScene.cpp */,
+				35A0DD2B1D588757008911BD /* SocialNetworkSignIn.h */,
+				35A0DD291D588757008911BD /* SocialNetworkSignIn-android.cpp */,
+				35A0DD2A1D588757008911BD /* SocialNetworkSignIn-ios.mm */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -426,6 +604,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0500;
+				TargetAttributes = {
+					1D6058900D05DD3D006BFB54 = {
+						DevelopmentTeam = 4H6V2H44EF;
+					};
+				};
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "mjdemo" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -487,13 +670,13 @@
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
-				46880B8119C43A67006E1F66 /* HelloWorld.png in Resources */,
-				46880B7D19C43A67006E1F66 /* CloseSelected.png in Resources */,
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
+				35A0DD101D588596008911BD /* GoogleSignIn.bundle in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
 				521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */,
-				521A8EA919F11F5000D177D7 /* fonts in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
+				35A0DD391D5890D7008911BD /* fonts in Resources */,
+				35A0DCD21D587AA8008911BD /* GoogleService-Info.plist in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
@@ -503,7 +686,6 @@
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
 				521A8E6419F0C34300D177D7 /* Default-667h@2x.png in Resources */,
-				46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
 				CB8541228890D8618E423ABE /* sdkbox_config.json in Resources */,
 			);
@@ -513,12 +695,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46880B8219C43A67006E1F66 /* HelloWorld.png in Resources */,
 				503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */,
 				3EACC99019EE6D4300EB3C5E /* res in Resources */,
-				521A8EAA19F11F5000D177D7 /* fonts in Resources */,
-				46880B7C19C43A67006E1F66 /* CloseNormal.png in Resources */,
-				46880B7E19C43A67006E1F66 /* CloseSelected.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,7 +711,13 @@
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				35A0DD2F1D588757008911BD /* SocialNetworkSignIn-ios.mm in Sources */,
+				35A0DD0D1D588596008911BD /* CHANGELOG.md in Sources */,
+				35A0DD2C1D588757008911BD /* JsonDump.cpp in Sources */,
+				35A0DD0F1D588596008911BD /* README.md in Sources */,
+				35A0DD2E1D588757008911BD /* SocialNetworkSignIn-android.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				35A0DD2D1D588757008911BD /* LoginScene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,7 +754,18 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)/ios/GoogleSignIn/Frameworks",
+					"$(PROJECT_DIR)/ios/Google/Google/Frameworks",
+					"$(PROJECT_DIR)/ios/Google/GoogleAppUtilities/Frameworks",
+					"$(PROJECT_DIR)/ios/Google/GoogleAuthUtilities/Frameworks",
+					"$(PROJECT_DIR)/ios/Google/GoogleInterchangeUtilities/Frameworks",
+					"$(PROJECT_DIR)/ios/Google/GoogleNetworkingUtilities/Frameworks",
+					"$(PROJECT_DIR)/ios/Google/GoogleSignIn/Frameworks",
+					"$(PROJECT_DIR)/ios/Google/GoogleSymbolUtilities/Frameworks",
+					"$(PROJECT_DIR)/ios/Google/GoogleUtilities/Frameworks",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -592,7 +787,9 @@
 				OTHER_LDFLAGS = (
 					"$(_COCOS_LIB_IOS_BEGIN)",
 					"$(_COCOS_LIB_IOS_END)",
+					"-ObjC",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.earlystart.monkeyjunior.en;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(_COCOS_HEADER_IOS_BEGIN) $(_COCOS_HEADER_IOS_END)";
@@ -607,7 +804,18 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)/ios/GoogleSignIn/Frameworks",
+					"$(PROJECT_DIR)/ios/Google/Google/Frameworks",
+					"$(PROJECT_DIR)/ios/Google/GoogleAppUtilities/Frameworks",
+					"$(PROJECT_DIR)/ios/Google/GoogleAuthUtilities/Frameworks",
+					"$(PROJECT_DIR)/ios/Google/GoogleInterchangeUtilities/Frameworks",
+					"$(PROJECT_DIR)/ios/Google/GoogleNetworkingUtilities/Frameworks",
+					"$(PROJECT_DIR)/ios/Google/GoogleSignIn/Frameworks",
+					"$(PROJECT_DIR)/ios/Google/GoogleSymbolUtilities/Frameworks",
+					"$(PROJECT_DIR)/ios/Google/GoogleUtilities/Frameworks",
+				);
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ios/Prefix.pch;
@@ -627,7 +835,9 @@
 				OTHER_LDFLAGS = (
 					"$(_COCOS_LIB_IOS_BEGIN)",
 					"$(_COCOS_LIB_IOS_END)",
+					"-ObjC",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.earlystart.monkeyjunior.en;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(_COCOS_HEADER_IOS_BEGIN) $(_COCOS_HEADER_IOS_END)";

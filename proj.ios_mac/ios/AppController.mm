@@ -27,8 +27,12 @@
 #import "cocos2d.h"
 #import "AppDelegate.h"
 #import "RootViewController.h"
+#import <GoogleSignIn/GoogleSignIn.h>
+#include "LoginScene.h"
+@interface AppController()<UIApplicationDelegate, GIDSignInDelegate, GIDSignInUIDelegate>
+@end
 
-@implementation AppController
+@implementation AppController 
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -84,11 +88,34 @@ static AppDelegate s_sharedApplication;
     cocos2d::GLView *glview = cocos2d::GLViewImpl::createWithEAGLView(eaglView);
     cocos2d::Director::getInstance()->setOpenGLView(glview);
 
+    
+    [GIDSignIn sharedInstance].clientID = @"794463747839-djgu05j60avmrijq9vclhndkp4es83qh.apps.googleusercontent.com";
+    [GIDSignIn sharedInstance].delegate = self;
+    [GIDSignIn sharedInstance].uiDelegate = self;
+
+
+    
     app->run();
 
     return YES;
 }
 
+- (BOOL)application:(UIApplication *)app
+            openURL:(NSURL *)url
+            options:(NSDictionary *)options {
+    return [[GIDSignIn sharedInstance] handleURL:url
+                               sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
+                                      annotation:options[UIApplicationOpenURLOptionsAnnotationKey]];
+}
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    return [[GIDSignIn sharedInstance] handleURL:url
+                               sourceApplication:sourceApplication
+                                      annotation:annotation];
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     /*
@@ -143,6 +170,64 @@ static AppDelegate s_sharedApplication;
 - (void)dealloc {
     [window release];
     [super dealloc];
+}
+
+#pragma mark - SOCIAL SIGN IN
+- (void)signIn:(GIDSignIn *)signIn
+didSignInForUser:(GIDGoogleUser *)user
+     withError:(NSError *)error {
+    // Perform any operations on signed in user here.
+    NSString *userId = user.userID;                  // For client-side use only!
+//    NSString *idToken = user.authentication.idToken; // Safe to send to the server
+    NSString *fullName = user.profile.name;
+    NSString *email = user.profile.email;
+    
+    cocos2d::ValueMap userInfo;
+    userInfo["name"] = std::string([fullName UTF8String]);
+    userInfo["id"] = std::string([userId UTF8String]);
+    userInfo["email"] = std::string([email UTF8String]);
+    if (userInfo["email"].isNull()) {
+        userInfo["email"] = userInfo["id"];
+    }
+    
+    auto _loginScene = dynamic_cast<LoginScene *>(Director::getInstance()->getRunningScene()->getChildByTag(183));
+    _loginScene->didLoginGmail(userInfo);
+}
+
+- (void)signIn:(GIDSignIn *)signIn
+didDisconnectWithUser:(GIDGoogleUser *)user
+     withError:(NSError *)error {
+    // Perform any operations when the user disconnects from app here.
+    // ...
+}
+
+- (void)signInWillDispatch:(GIDSignIn *)signIn error:(NSError *)error {
+   
+}
+
+// Present a view that prompts the user to sign in with Google
+- (void)signIn:(GIDSignIn *)signIn
+presentViewController:(UIViewController *)viewController {
+    [[[UIApplication sharedApplication] keyWindow].rootViewController presentViewController:viewController animated:YES completion:nil];
+}
+
+// Dismiss the "Sign in with Google" view
+- (void)signIn:(GIDSignIn *)signIn
+dismissViewController:(UIViewController *)viewController {
+    [[[UIApplication sharedApplication] keyWindow].rootViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void) onGooglePlusSignIn{
+    if (![GIDSignIn sharedInstance].hasAuthInKeychain) {
+        [[GIDSignIn sharedInstance] signIn];
+    }else{
+        [[GIDSignIn sharedInstance] signInSilently];
+    }
+    
+}
+
+-(void) onGooglePlusSignOut{
+    [[GIDSignIn sharedInstance] signOut];
 }
 
 

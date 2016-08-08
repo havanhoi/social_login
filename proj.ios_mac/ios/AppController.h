@@ -1,4 +1,5 @@
 #import <UIKit/UIKit.h>
+#define XAppDelegate ((AppController*)[[UIApplication sharedApplication] delegate])
 
 @class RootViewController;
 
@@ -7,6 +8,12 @@
 }
 
 @property(nonatomic, readonly) RootViewController* viewController;
+
+
+- (void) onGooglePlusSignIn;
+- (void) onGooglePlusSignOut;
+- (void) onFBSignIn;
+- (void) onFBSignOut;
 
 @end
 
