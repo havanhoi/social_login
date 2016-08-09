@@ -53,7 +53,7 @@ bool LoginScene::init()
     
     auto closeItem_2 = MenuItemImage::create("fonts/CloseNormal.png",
                                              "fonts/CloseSelected.png",
-                                             CC_CALLBACK_1(LoginScene::menuCloseCallback_Twitter, this));
+                                             CC_CALLBACK_1(LoginScene::menuCloseCallback_LogOut, this));
     
     closeItem_2->setPosition(Vec2(visibleSize.width*0.75,visibleSize.height *0.2));
     closeItem_2->setScale(2.0);
@@ -97,16 +97,17 @@ void LoginScene::menuCloseCallback(Ref* pSender)
 
 void LoginScene::menuCloseCallback_Gmail(Ref* pSender)
 {
-    SOCIAL_NETWORK->onGooglePlusSignIn();
+    SOCIAL_NETWORK->onGoogleSignIn();
 }
 
 
-void LoginScene::menuCloseCallback_Twitter(Ref* pSender)
+void LoginScene::menuCloseCallback_LogOut(Ref* pSender)
 {
-    SOCIAL_NETWORK->onGooglePlusSignOut();
+    SOCIAL_NETWORK->onFBSignOut();
+    SOCIAL_NETWORK->onGoogleSignOut();
 }
 
-void LoginScene::didLoginFacebook(cocos2d::ValueMap infoFB){
+void LoginScene::didSignInFacebook(cocos2d::ValueMap infoFB){
     infoUser.clear();
     infoUser = infoFB;
     CCLOG("______________USERNAME FACEBOOK______________");
@@ -116,7 +117,7 @@ void LoginScene::didLoginFacebook(cocos2d::ValueMap infoFB){
     CCLOG("_____________________________________________");
 }
 
-void LoginScene::didLoginGmail(cocos2d::ValueMap infoGmail){
+void LoginScene::didSignInGmail(cocos2d::ValueMap infoGmail){
     infoUser.clear();
     infoUser = infoGmail;
     CCLOG("______________USERNAME GMAIL_________________");
@@ -124,23 +125,4 @@ void LoginScene::didLoginGmail(cocos2d::ValueMap infoGmail){
     CCLOG("id: %s", infoUser["id"].asString().c_str());
     CCLOG("email: %s", infoUser["email"].asString().c_str());
     CCLOG("_____________________________________________");
-}
-
-void LoginScene::didLoginTwitter(cocos2d::ValueMap infoTW){
-    infoUser.clear();
-    infoUser = infoTW;
-    CCLOG("______________USERNAME TWITTER_______________");
-    CCLOG("name: %s", infoUser["name"].asString().c_str());
-    CCLOG("id: %s", infoUser["id"].asString().c_str());
-    CCLOG("email: %s", infoUser["email"].asString().c_str());
-    CCLOG("_____________________________________________");
-}
-
-#pragma mark - FACEBOOK
-void LoginScene::loginFacebook(){
-
-}
-
-void LoginScene::logoutFacebook(){
-
 }

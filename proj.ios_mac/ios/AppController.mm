@@ -29,6 +29,7 @@
 #import "RootViewController.h"
 #import <GoogleSignIn/GoogleSignIn.h>
 #include "LoginScene.h"
+#import "SCFacebook.h"
 @interface AppController()<UIApplicationDelegate, GIDSignInDelegate, GIDSignInUIDelegate>
 @end
 
@@ -93,28 +94,66 @@ static AppDelegate s_sharedApplication;
     [GIDSignIn sharedInstance].delegate = self;
     [GIDSignIn sharedInstance].uiDelegate = self;
 
-
     
+    //Init SCFacebook
+    [SCFacebook initWithReadPermissions:@[@"user_about_me",
+                                          @"user_birthday",
+                                          @"email",
+                                          @"user_photos",
+                                          @"user_events",
+                                          @"user_friends",
+                                          @"user_videos",
+                                          @"public_profile"]
+                     publishPermissions:@[@"manage_pages",
+                                          @"publish_actions",
+                                          @"publish_pages"]
+     ];
+    
+    [FBSDKProfile enableUpdatesOnAccessTokenChange:YES];
+    countFBLogin = 0;
+    bool fb = [[FBSDKApplicationDelegate sharedInstance] application:application
+                                       didFinishLaunchingWithOptions:launchOptions];
     app->run();
+    return fb;
 
-    return YES;
 }
+
 
 - (BOOL)application:(UIApplication *)app
             openURL:(NSURL *)url
             options:(NSDictionary *)options {
-    return [[GIDSignIn sharedInstance] handleURL:url
-                               sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
-                                      annotation:options[UIApplicationOpenURLOptionsAnnotationKey]];
+    
+    if ([[GIDSignIn sharedInstance] handleURL:url
+                            sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
+                                   annotation:options[UIApplicationOpenURLOptionsAnnotationKey]]) {
+        return [[GIDSignIn sharedInstance] handleURL:url
+                                   sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
+                                          annotation:options[UIApplicationOpenURLOptionsAnnotationKey]];
+    }
+    
+    return [[FBSDKApplicationDelegate sharedInstance] application:app
+                                                                 openURL:url
+                                                       sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
+                                                              annotation:options[UIApplicationOpenURLOptionsAnnotationKey]];
 }
+
 
 - (BOOL)application:(UIApplication *)application
             openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication
          annotation:(id)annotation {
+    
+    bool fbSignIn = [[FBSDKApplicationDelegate sharedInstance] application:application
+                                                                       openURL:url
+                                                             sourceApplication:sourceApplication
+                                                                    annotation:annotation];
+    if (fbSignIn) {
+        return fbSignIn;
+    }
     return [[GIDSignIn sharedInstance] handleURL:url
                                sourceApplication:sourceApplication
-                                      annotation:annotation];
+                                      annotation:annotation];;
+
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -127,11 +166,18 @@ static AppDelegate s_sharedApplication;
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    /*
-     Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-     */
-     //We don't need to call this method any more. It will interupt user defined game pause&resume logic
-    /* cocos2d::Director::getInstance()->resume(); */
+    [FBSDKAppEvents activateApp];
+    
+    // Do the following if you use Mobile App Engagement Ads to get the deferred
+    // app link after your app is installed.
+    [FBSDKAppLinkUtility fetchDeferredAppLink:^(NSURL *url, NSError *error) {
+        if (error) {
+            NSLog(@"Received error while fetching deferred app link %@", error);
+        }
+        if (url) {
+            [[UIApplication sharedApplication] openURL:url];
+        }
+    }];
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
@@ -177,6 +223,9 @@ static AppDelegate s_sharedApplication;
 didSignInForUser:(GIDGoogleUser *)user
      withError:(NSError *)error {
     // Perform any operations on signed in user here.
+    if (error) {
+        return;
+    }
     NSString *userId = user.userID;                  // For client-side use only!
 //    NSString *idToken = user.authentication.idToken; // Safe to send to the server
     NSString *fullName = user.profile.name;
@@ -191,7 +240,7 @@ didSignInForUser:(GIDGoogleUser *)user
     }
     
     auto _loginScene = dynamic_cast<LoginScene *>(Director::getInstance()->getRunningScene()->getChildByTag(183));
-    _loginScene->didLoginGmail(userInfo);
+    _loginScene->didSignInGmail(userInfo);
 }
 
 - (void)signIn:(GIDSignIn *)signIn
@@ -217,7 +266,7 @@ dismissViewController:(UIViewController *)viewController {
     [[[UIApplication sharedApplication] keyWindow].rootViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
--(void) onGooglePlusSignIn{
+-(void) onGoogleSignIn{
     if (![GIDSignIn sharedInstance].hasAuthInKeychain) {
         [[GIDSignIn sharedInstance] signIn];
     }else{
@@ -226,9 +275,67 @@ dismissViewController:(UIViewController *)viewController {
     
 }
 
--(void) onGooglePlusSignOut{
+-(void) onGoogleSignOut{
     [[GIDSignIn sharedInstance] signOut];
 }
 
+
+-(void) onFBGetUserInfo{
+    [SCFacebook getUserFields:@"id, name, email" callBack:^(BOOL success, id result) {
+        if (success) {
+            NSLog(@"%@", result);
+            
+            cocos2d::ValueMap userInfo;
+            if ([result objectForKey:@"name"] != NULL) {
+                userInfo["name"] = std::string([[result objectForKey:@"name"] UTF8String]);
+            }
+            if ([result objectForKey:@"id"] != NULL) {
+                userInfo["id"] = std::string([[result objectForKey:@"id"] UTF8String]);
+
+            }
+            if ([result objectForKey:@"email"] != NULL) {
+                userInfo["email"] = std::string([[result objectForKey:@"email"] UTF8String]);
+                if (userInfo["email"].isNull()) {
+                    userInfo["email"] = userInfo["id"];
+                }
+            }
+            auto _loginScene = dynamic_cast<LoginScene *>(Director::getInstance()->getRunningScene()->getChildByTag(183));
+            _loginScene->didSignInFacebook(userInfo);
+            
+        }else{
+            NSLog(@"%@", result);
+            [[[UIAlertView alloc] initWithTitle:@"" message:@"Login Fail" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
+        }
+    }];
+}
+
+-(void) onFBSignIn{
+    if ([FBSDKAccessToken currentAccessToken]) {
+        [self onFBGetUserInfo];
+    }else{
+        [SCFacebook loginCallBack:^(BOOL success, id result) {
+            if (success) {
+                [self onFBGetUserInfo];
+            }else{
+                NSLog(@"countFBLogin = %d", countFBLogin);
+                if (countFBLogin == 0) {
+                    countFBLogin ++;
+                    [self onFBGetUserInfo];
+                }else{
+                    countFBLogin = 0;
+                    [[[UIAlertView alloc] initWithTitle:@"" message:@"Login Fail" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
+                }
+            }
+        }];
+    }
+}
+
+-(void) onFBSignOut{
+    [SCFacebook logoutCallBack:^(BOOL success, id result) {
+        if (success) {
+            //Logout Done.
+        }
+    }];
+}
 
 @end

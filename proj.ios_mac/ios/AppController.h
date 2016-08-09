@@ -5,15 +5,15 @@
 
 @interface AppController : NSObject <UIApplicationDelegate> {
     UIWindow *window;
+    int countFBLogin;
 }
 
 @property(nonatomic, readonly) RootViewController* viewController;
 
 
-- (void) onGooglePlusSignIn;
-- (void) onGooglePlusSignOut;
+- (void) onGoogleSignIn;
+- (void) onGoogleSignOut;
 - (void) onFBSignIn;
 - (void) onFBSignOut;
-
 @end
 

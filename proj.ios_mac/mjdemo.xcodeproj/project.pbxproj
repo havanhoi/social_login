@@ -12,6 +12,10 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		351458B61D59BE6B00DD88A8 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 351458B31D59BE6B00DD88A8 /* FBSDKCoreKit.framework */; };
+		351458B71D59BE6B00DD88A8 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 351458B41D59BE6B00DD88A8 /* FBSDKLoginKit.framework */; };
+		351458B81D59BE6B00DD88A8 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 351458B51D59BE6B00DD88A8 /* FBSDKShareKit.framework */; };
+		359537301D5997210049F29A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3595372F1D5997210049F29A /* CoreGraphics.framework */; };
 		35A0DCD21D587AA8008911BD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 35A0DCD11D587AA8008911BD /* GoogleService-Info.plist */; };
 		35A0DCD81D58845B008911BD /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A0DCD71D58845B008911BD /* CoreText.framework */; };
 		35A0DCDA1D5884B5008911BD /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A0DCD91D5884B5008911BD /* CoreMotion.framework */; };
@@ -33,6 +37,9 @@
 		35A0DD351D588FC6008911BD /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A0DD341D588FC6008911BD /* GoogleUtilities.framework */; };
 		35A0DD371D589071008911BD /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A0DD361D589071008911BD /* AddressBook.framework */; };
 		35A0DD391D5890D7008911BD /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 35A0DD381D5890D7008911BD /* fonts */; };
+		35C40A481D5968960040E6F9 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35C40A471D5968960040E6F9 /* Accounts.framework */; };
+		35C40E2F1D5990F30040E6F9 /* SCFacebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C40D9F1D5990F30040E6F9 /* SCFacebook.m */; };
+		35C40E311D5991E10040E6F9 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35C40E301D5991E10040E6F9 /* ImageIO.framework */; };
 		3EACC98F19EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		3EACC99019EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		40EB493C92C8D69367FDC9F0 /* sdkbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 360F4DA29A2970BB4E7D48B2 /* sdkbox.framework */; };
@@ -134,6 +141,10 @@
 		1D6058910D05DD3D006BFB54 /* mjdemo-mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mjdemo-mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		351458B31D59BE6B00DD88A8 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		351458B41D59BE6B00DD88A8 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		351458B51D59BE6B00DD88A8 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		3595372F1D5997210049F29A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		35A0DCD11D587AA8008911BD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "ios/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		35A0DCD71D58845B008911BD /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
 		35A0DCD91D5884B5008911BD /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
@@ -158,6 +169,12 @@
 		35A0DD341D588FC6008911BD /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = "<group>"; };
 		35A0DD361D589071008911BD /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/AddressBook.framework; sourceTree = DEVELOPER_DIR; };
 		35A0DD381D5890D7008911BD /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
+		35C40A471D5968960040E6F9 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Accounts.framework; sourceTree = DEVELOPER_DIR; };
+		35C40A521D598C2A0040E6F9 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/usr/lib/libsqlite3.tbd; sourceTree = DEVELOPER_DIR; };
+		35C40A541D598C340040E6F9 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/usr/lib/libsqlite3.0.tbd; sourceTree = DEVELOPER_DIR; };
+		35C40D9E1D5990F30040E6F9 /* SCFacebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCFacebook.h; sourceTree = "<group>"; };
+		35C40D9F1D5990F30040E6F9 /* SCFacebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCFacebook.m; sourceTree = "<group>"; };
+		35C40E301D5991E10040E6F9 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
 		360F4DA29A2970BB4E7D48B2 /* sdkbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = sdkbox.framework; sourceTree = SOURCE_ROOT; };
 		3EACC98E19EE6D4300EB3C5E /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 		3FBB45D0B5902ECD725B2FD6 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -220,6 +237,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				351458B71D59BE6B00DD88A8 /* FBSDKLoginKit.framework in Frameworks */,
+				359537301D5997210049F29A /* CoreGraphics.framework in Frameworks */,
+				35C40E311D5991E10040E6F9 /* ImageIO.framework in Frameworks */,
+				35C40A481D5968960040E6F9 /* Accounts.framework in Frameworks */,
 				35A0DD371D589071008911BD /* AddressBook.framework in Frameworks */,
 				35A0DD241D58867C008911BD /* SafariServices.framework in Frameworks */,
 				35A0DCDE1D5884EF008911BD /* GameController.framework in Frameworks */,
@@ -233,6 +254,7 @@
 				ED545A7C1B68A1F400C3958E /* libiconv.dylib in Frameworks */,
 				52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */,
 				1AC6FB30180E99EB004C840B /* libcocos2d iOS.a in Frameworks */,
+				351458B81D59BE6B00DD88A8 /* FBSDKShareKit.framework in Frameworks */,
 				D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */,
 				35A0DD211D588671008911BD /* GoogleNetworkingUtilities.framework in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
@@ -242,6 +264,7 @@
 				BF1712471292920000B8313A /* libz.dylib in Frameworks */,
 				BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */,
 				D44C620C132DFF330009C878 /* OpenAL.framework in Frameworks */,
+				351458B61D59BE6B00DD88A8 /* FBSDKCoreKit.framework in Frameworks */,
 				D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */,
 				D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */,
 				40EB493C92C8D69367FDC9F0 /* sdkbox.framework in Frameworks */,
@@ -285,6 +308,7 @@
 				503AE0FE17EB989F00D1A890 /* RootViewController.h */,
 				503AE0FF17EB989F00D1A890 /* RootViewController.mm */,
 				35A0DCD11D587AA8008911BD /* GoogleService-Info.plist */,
+				35C40C411D5990F20040E6F9 /* Facebook */,
 				35A0DCDF1D588595008911BD /* Google */,
 			);
 			name = ios;
@@ -327,6 +351,11 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3595372F1D5997210049F29A /* CoreGraphics.framework */,
+				35C40E301D5991E10040E6F9 /* ImageIO.framework */,
+				35C40A541D598C340040E6F9 /* libsqlite3.0.tbd */,
+				35C40A521D598C2A0040E6F9 /* libsqlite3.tbd */,
+				35C40A471D5968960040E6F9 /* Accounts.framework */,
 				35A0DD361D589071008911BD /* AddressBook.framework */,
 				35A0DD231D58867C008911BD /* SafariServices.framework */,
 				35A0DCDD1D5884EF008911BD /* GameController.framework */,
@@ -481,6 +510,19 @@
 			path = Frameworks;
 			sourceTree = "<group>";
 		};
+		35C40C411D5990F20040E6F9 /* Facebook */ = {
+			isa = PBXGroup;
+			children = (
+				35C40D9E1D5990F30040E6F9 /* SCFacebook.h */,
+				35C40D9F1D5990F30040E6F9 /* SCFacebook.m */,
+				351458B31D59BE6B00DD88A8 /* FBSDKCoreKit.framework */,
+				351458B41D59BE6B00DD88A8 /* FBSDKLoginKit.framework */,
+				351458B51D59BE6B00DD88A8 /* FBSDKShareKit.framework */,
+			);
+			name = Facebook;
+			path = ios/Facebook;
+			sourceTree = SOURCE_ROOT;
+		};
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -497,15 +539,15 @@
 			children = (
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
 				46880B8419C43A87006E1F66 /* AppDelegate.cpp */,
-				46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */,
-				46880B8719C43A87006E1F66 /* HelloWorldScene.h */,
-				35A0DD251D588757008911BD /* JsonDump.cpp */,
-				35A0DD261D588757008911BD /* JsonDump.h */,
 				35A0DD281D588757008911BD /* LoginScene.h */,
 				35A0DD271D588757008911BD /* LoginScene.cpp */,
 				35A0DD2B1D588757008911BD /* SocialNetworkSignIn.h */,
 				35A0DD291D588757008911BD /* SocialNetworkSignIn-android.cpp */,
 				35A0DD2A1D588757008911BD /* SocialNetworkSignIn-ios.mm */,
+				35A0DD261D588757008911BD /* JsonDump.h */,
+				35A0DD251D588757008911BD /* JsonDump.cpp */,
+				46880B8719C43A87006E1F66 /* HelloWorldScene.h */,
+				46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -716,6 +758,7 @@
 				35A0DD2C1D588757008911BD /* JsonDump.cpp in Sources */,
 				35A0DD0F1D588596008911BD /* README.md in Sources */,
 				35A0DD2E1D588757008911BD /* SocialNetworkSignIn-android.cpp in Sources */,
+				35C40E2F1D5990F30040E6F9 /* SCFacebook.m in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				35A0DD2D1D588757008911BD /* LoginScene.cpp in Sources */,
 			);
@@ -756,15 +799,14 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)",
-					"$(PROJECT_DIR)/ios/GoogleSignIn/Frameworks",
-					"$(PROJECT_DIR)/ios/Google/Google/Frameworks",
 					"$(PROJECT_DIR)/ios/Google/GoogleAppUtilities/Frameworks",
 					"$(PROJECT_DIR)/ios/Google/GoogleAuthUtilities/Frameworks",
-					"$(PROJECT_DIR)/ios/Google/GoogleInterchangeUtilities/Frameworks",
 					"$(PROJECT_DIR)/ios/Google/GoogleNetworkingUtilities/Frameworks",
 					"$(PROJECT_DIR)/ios/Google/GoogleSignIn/Frameworks",
 					"$(PROJECT_DIR)/ios/Google/GoogleSymbolUtilities/Frameworks",
 					"$(PROJECT_DIR)/ios/Google/GoogleUtilities/Frameworks",
+					"$(PROJECT_DIR)/ios/Facebook",
+					"$(PROJECT_DIR)",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
@@ -778,7 +820,7 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = ios/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"\"sdkbox.framework\"",
 					"\"PluginIAP.framework\"",
@@ -787,8 +829,10 @@
 				OTHER_LDFLAGS = (
 					"$(_COCOS_LIB_IOS_BEGIN)",
 					"$(_COCOS_LIB_IOS_END)",
+					"$(inherited)",
 					"-ObjC",
 				);
+				OTHER_LIBTOOLFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.earlystart.monkeyjunior.en;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -806,15 +850,14 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)",
-					"$(PROJECT_DIR)/ios/GoogleSignIn/Frameworks",
-					"$(PROJECT_DIR)/ios/Google/Google/Frameworks",
 					"$(PROJECT_DIR)/ios/Google/GoogleAppUtilities/Frameworks",
 					"$(PROJECT_DIR)/ios/Google/GoogleAuthUtilities/Frameworks",
-					"$(PROJECT_DIR)/ios/Google/GoogleInterchangeUtilities/Frameworks",
 					"$(PROJECT_DIR)/ios/Google/GoogleNetworkingUtilities/Frameworks",
 					"$(PROJECT_DIR)/ios/Google/GoogleSignIn/Frameworks",
 					"$(PROJECT_DIR)/ios/Google/GoogleSymbolUtilities/Frameworks",
 					"$(PROJECT_DIR)/ios/Google/GoogleUtilities/Frameworks",
+					"$(PROJECT_DIR)/ios/Facebook",
+					"$(PROJECT_DIR)",
 				);
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -826,7 +869,7 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = ios/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"\"sdkbox.framework\"",
 					"\"PluginIAP.framework\"",
@@ -835,8 +878,10 @@
 				OTHER_LDFLAGS = (
 					"$(_COCOS_LIB_IOS_BEGIN)",
 					"$(_COCOS_LIB_IOS_END)",
+					"$(inherited)",
 					"-ObjC",
 				);
+				OTHER_LIBTOOLFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.earlystart.monkeyjunior.en;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

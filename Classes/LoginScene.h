@@ -18,17 +18,14 @@ public:
     // Button callback
     void menuCloseCallback(cocos2d::Ref* pSender);
     void menuCloseCallback_Gmail(cocos2d::Ref* pSender);
-    void menuCloseCallback_Twitter(cocos2d::Ref* pSender);
+    void menuCloseCallback_LogOut(cocos2d::Ref* pSender);
     
     
     //call back delegate
-    void didLoginFacebook(cocos2d::ValueMap infoFB);
-    void didLoginGmail(cocos2d::ValueMap infoGmail);
-    void didLoginTwitter(cocos2d::ValueMap infoTW);
+    void didSignInFacebook(cocos2d::ValueMap infoFB);
+    void didSignInGmail(cocos2d::ValueMap infoGmail);
     
     cocos2d::ValueMap infoUser;
-    void loginFacebook();
-    void logoutFacebook();
 private:
     void onEnter();
 };

@@ -58,6 +58,19 @@
 	<string></string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>UIAppFonts</key>
+	<array/>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+	</array>
+	<key>UIPrerenderedIcon</key>
+	<true/>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -68,19 +81,28 @@
 				<string>com.googleusercontent.apps.794463747839-djgu05j60avmrijq9vclhndkp4es83qh</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb186281401544836</string>
+			</array>
+		</dict>
 	</array>
-	<key>CFBundleVersion</key>
-	<string>1.0</string>
-	<key>LSRequiresIPhoneOS</key>
-	<true/>
-	<key>UIAppFonts</key>
-	<array/>
-	<key>UIPrerenderedIcon</key>
-	<true/>
-	<key>UISupportedInterfaceOrientations</key>
+	<key>FacebookAppID</key>
+	<string>186281401544836</string>
+	<key>FacebookDisplayName</key>
+	<string>Bé học tiếng anh-Monkey Junior</string>
+	<key>LSApplicationQueriesSchemes</key>
 	<array>
-		<string>UIInterfaceOrientationLandscapeRight</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>fbapi</string>
+		<string>fb-messenger-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
 	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 </dict>
 </plist>

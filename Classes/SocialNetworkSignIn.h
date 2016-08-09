@@ -7,8 +7,8 @@ class SocialNetworkSignIn{
 public:
     SocialNetworkSignIn();
     static SocialNetworkSignIn *getInstance();
-    static void onGooglePlusSignIn();
-    static void onGooglePlusSignOut();
+    static void onGoogleSignIn();
+    static void onGoogleSignOut();
     
     static void onFBSignIn();
     static void onFBSignOut();

@@ -15,11 +15,11 @@ SocialNetworkSignIn* SocialNetworkSignIn::getInstance(){
 }
 SocialNetworkSignIn::SocialNetworkSignIn(){}
 
-void SocialNetworkSignIn::onGooglePlusSignIn(){
-    [XAppDelegate onGooglePlusSignIn];
+void SocialNetworkSignIn::onGoogleSignIn(){
+    [XAppDelegate onGoogleSignIn];
 }
-void SocialNetworkSignIn::onGooglePlusSignOut(){
-    [XAppDelegate onGooglePlusSignOut];
+void SocialNetworkSignIn::onGoogleSignOut(){
+    [XAppDelegate onGoogleSignOut];
 }
 
 void SocialNetworkSignIn::onFBSignIn(){
