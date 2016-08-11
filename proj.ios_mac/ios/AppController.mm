@@ -277,6 +277,8 @@ dismissViewController:(UIViewController *)viewController {
 
 -(void) onGoogleSignOut{
     [[GIDSignIn sharedInstance] signOut];
+    auto _loginScene = dynamic_cast<LoginScene *>(Director::getInstance()->getRunningScene()->getChildByTag(183));
+    _loginScene->didSocialSignOut();
 }
 
 
@@ -334,6 +336,8 @@ dismissViewController:(UIViewController *)viewController {
     [SCFacebook logoutCallBack:^(BOOL success, id result) {
         if (success) {
             //Logout Done.
+            auto _loginScene = dynamic_cast<LoginScene *>(Director::getInstance()->getRunningScene()->getChildByTag(183));
+            _loginScene->didSocialSignOut();
         }
     }];
 }

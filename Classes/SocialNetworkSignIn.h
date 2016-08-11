@@ -4,6 +4,8 @@
 #define SOCIAL_NETWORK SocialNetworkSignIn::getInstance()
 
 class SocialNetworkSignIn{
+    
+
 public:
     SocialNetworkSignIn();
     static SocialNetworkSignIn *getInstance();
@@ -12,6 +14,6 @@ public:
     
     static void onFBSignIn();
     static void onFBSignOut();
+        
 };
-
 #endif

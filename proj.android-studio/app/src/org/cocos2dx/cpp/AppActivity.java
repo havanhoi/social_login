@@ -28,7 +28,6 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
-import com.google.android.gms.common.api.GoogleApiClient;
 
 import org.cocos2dx.lib.Cocos2dxActivity;
 
@@ -36,7 +35,9 @@ import org.cocos2dx.lib.Cocos2dxActivity;
 public class AppActivity extends Cocos2dxActivity {
     static AppActivity _ac = null;
     static String TAG = "AppActivity";
-    private GoogleApiClient mGoogleApiClient;
+
+
+
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,24 +46,58 @@ public class AppActivity extends Cocos2dxActivity {
                 .build();
         Log.e("AppActivity", "Vao day roi");
 
-//        mGoogleApiClient = new GoogleApiClient.Builder(this)
-//                .enableAutoManage(this /* FragmentActivity */, this /* OnConnectionFailedListener */)
-//                .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
-//                .build();
+        String infoUser = "";
+
+        Bundle bundle = getIntent().getExtras();
+        if(bundle != null) {
+            if(bundle.getString("personId") != null) {
+                infoUser += "personId: " + bundle.getString("personId").toString();
+                infoUser += " - personName: " + bundle.getString("personName").toString();
+                infoUser += " - personEmail: " + bundle.getString("personEmail").toString();
+
+                String personName = bundle.getString("personName").toString();
+                String personEmail = bundle.getString("personEmail").toString();
+                String personId = bundle.getString("personId").toString();
+
+                CppBridge.onDidGoogleSignIn(personName, personEmail, personId);
+                //Toast.makeText(this.getBaseContext(), infoUser, Toast.LENGTH_SHORT).show();
+            }
+
+            if (bundle.getBoolean("didSignOut", false)){
+                Log.e("didSignOut", " didSignOut");
+                CppBridge.onDidGoogleSignOut();
+            }
+        }
+
+
         _ac = this;
     }
 
-    public static void loginAction() {
+    public static void onGoogleSignIn() {
         Log.e(TAG, "=====> loginAction");
-        _ac.openLogin();
+        _ac.signInAction();
     }
 
-    public void openLogin() {
+    public static void onGoogleSignOut() {
+        Log.e(TAG, "=====> loginAction");
+        _ac.signOutAction();
+    }
+
+    public void signInAction() {
         Log.e(TAG, "=====> openLogin");
         Intent intent = new Intent(this,org.cocos2dx.cpp.SocialLoginActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_TASK_ON_HOME);
+        intent.putExtra("isSignIn", true);
         startActivity(intent);
     }
 
+
+    public void signOutAction() {
+        Log.e(TAG, "=====> openLogin");
+        Intent intent = new Intent(this,org.cocos2dx.cpp.SocialLoginActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_TASK_ON_HOME);
+        intent.putExtra("isSignOut", true);
+        startActivity(intent);
+    }
 }
 

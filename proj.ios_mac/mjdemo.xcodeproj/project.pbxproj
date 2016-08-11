@@ -37,6 +37,8 @@
 		35A0DD351D588FC6008911BD /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A0DD341D588FC6008911BD /* GoogleUtilities.framework */; };
 		35A0DD371D589071008911BD /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A0DD361D589071008911BD /* AddressBook.framework */; };
 		35A0DD391D5890D7008911BD /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 35A0DD381D5890D7008911BD /* fonts */; };
+		35C0EB9E1D5AE7A7007F1FC4 /* SignInScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35C0EB9C1D5AE7A7007F1FC4 /* SignInScene.cpp */; };
+		35C0EBA61D5B3283007F1FC4 /* CppBridge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35C0EBA41D5B3283007F1FC4 /* CppBridge.cpp */; };
 		35C40A481D5968960040E6F9 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35C40A471D5968960040E6F9 /* Accounts.framework */; };
 		35C40E2F1D5990F30040E6F9 /* SCFacebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C40D9F1D5990F30040E6F9 /* SCFacebook.m */; };
 		35C40E311D5991E10040E6F9 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35C40E301D5991E10040E6F9 /* ImageIO.framework */; };
@@ -45,8 +47,6 @@
 		40EB493C92C8D69367FDC9F0 /* sdkbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 360F4DA29A2970BB4E7D48B2 /* sdkbox.framework */; };
 		46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46880B8419C43A87006E1F66 /* AppDelegate.cpp */; };
 		46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46880B8419C43A87006E1F66 /* AppDelegate.cpp */; };
-		46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */; };
-		46880B8B19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */; };
 		503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 503AE0F617EB97AB00D1A890 /* Icon.icns */; };
 		503AE10017EB989F00D1A890 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FB17EB989F00D1A890 /* AppController.mm */; };
 		503AE10117EB989F00D1A890 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FC17EB989F00D1A890 /* main.m */; };
@@ -169,6 +169,10 @@
 		35A0DD341D588FC6008911BD /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = "<group>"; };
 		35A0DD361D589071008911BD /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/AddressBook.framework; sourceTree = DEVELOPER_DIR; };
 		35A0DD381D5890D7008911BD /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
+		35C0EB9C1D5AE7A7007F1FC4 /* SignInScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SignInScene.cpp; sourceTree = "<group>"; };
+		35C0EB9D1D5AE7A7007F1FC4 /* SignInScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInScene.h; sourceTree = "<group>"; };
+		35C0EBA41D5B3283007F1FC4 /* CppBridge.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CppBridge.cpp; sourceTree = "<group>"; };
+		35C0EBA51D5B3283007F1FC4 /* CppBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CppBridge.h; sourceTree = "<group>"; };
 		35C40A471D5968960040E6F9 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Accounts.framework; sourceTree = DEVELOPER_DIR; };
 		35C40A521D598C2A0040E6F9 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/usr/lib/libsqlite3.tbd; sourceTree = DEVELOPER_DIR; };
 		35C40A541D598C340040E6F9 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/usr/lib/libsqlite3.0.tbd; sourceTree = DEVELOPER_DIR; };
@@ -180,8 +184,6 @@
 		3FBB45D0B5902ECD725B2FD6 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
 		46880B8419C43A87006E1F66 /* AppDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppDelegate.cpp; sourceTree = "<group>"; };
 		46880B8519C43A87006E1F66 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelloWorldScene.cpp; sourceTree = "<group>"; };
-		46880B8719C43A87006E1F66 /* HelloWorldScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloWorldScene.h; sourceTree = "<group>"; };
 		503AE0F617EB97AB00D1A890 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
 		503AE0F717EB97AB00D1A890 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		503AE0FA17EB989F00D1A890 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = ios/AppController.h; sourceTree = SOURCE_ROOT; };
@@ -541,13 +543,15 @@
 				46880B8419C43A87006E1F66 /* AppDelegate.cpp */,
 				35A0DD281D588757008911BD /* LoginScene.h */,
 				35A0DD271D588757008911BD /* LoginScene.cpp */,
+				35C0EB9D1D5AE7A7007F1FC4 /* SignInScene.h */,
+				35C0EB9C1D5AE7A7007F1FC4 /* SignInScene.cpp */,
 				35A0DD2B1D588757008911BD /* SocialNetworkSignIn.h */,
 				35A0DD291D588757008911BD /* SocialNetworkSignIn-android.cpp */,
 				35A0DD2A1D588757008911BD /* SocialNetworkSignIn-ios.mm */,
+				35C0EBA51D5B3283007F1FC4 /* CppBridge.h */,
+				35C0EBA41D5B3283007F1FC4 /* CppBridge.cpp */,
 				35A0DD261D588757008911BD /* JsonDump.h */,
 				35A0DD251D588757008911BD /* JsonDump.cpp */,
-				46880B8719C43A87006E1F66 /* HelloWorldScene.h */,
-				46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -750,7 +754,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
-				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				35A0DD2F1D588757008911BD /* SocialNetworkSignIn-ios.mm in Sources */,
@@ -760,6 +763,8 @@
 				35A0DD2E1D588757008911BD /* SocialNetworkSignIn-android.cpp in Sources */,
 				35C40E2F1D5990F30040E6F9 /* SCFacebook.m in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				35C0EB9E1D5AE7A7007F1FC4 /* SignInScene.cpp in Sources */,
+				35C0EBA61D5B3283007F1FC4 /* CppBridge.cpp in Sources */,
 				35A0DD2D1D588757008911BD /* LoginScene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -770,7 +775,6 @@
 			files = (
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
-				46880B8B19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

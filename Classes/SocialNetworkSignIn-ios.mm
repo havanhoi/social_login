@@ -28,6 +28,9 @@ void SocialNetworkSignIn::onFBSignIn(){
 
 void SocialNetworkSignIn::onFBSignOut(){
     [XAppDelegate onFBSignOut];
+    
+    
+    
 }
 
 #endif

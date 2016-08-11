@@ -24,6 +24,7 @@ public:
     //call back delegate
     void didSignInFacebook(cocos2d::ValueMap infoFB);
     void didSignInGmail(cocos2d::ValueMap infoGmail);
+    void didSocialSignOut();
     
     cocos2d::ValueMap infoUser;
 private:

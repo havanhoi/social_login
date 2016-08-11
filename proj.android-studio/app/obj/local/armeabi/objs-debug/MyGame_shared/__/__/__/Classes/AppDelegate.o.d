@@ -337,7 +337,43 @@ obj/local/armeabi/objs-debug/MyGame_shared/__/__/__/Classes/AppDelegate.o: \
  /Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../deprecated/CCSet.h \
  /Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../deprecated/CCString.h \
  /Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../deprecated/CCDeprecated.h \
- jni/../../../Classes/HelloWorldScene.h jni/PluginIAP/PluginIAP.h
+ jni/../../../Classes/LoginScene.h \
+ /Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/CocosGUI.h \
+ /Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UIWidget.h \
+ /Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../2d/CCProtectedNode.h \
+ /Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UILayoutParameter.h \
+ /Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/GUIExport.h \
+ /Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/GUIDefine.h \
+ /Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../base/ObjectFactory.h \
+ /Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UILayout.h \
+ /Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UIButton.h \
+ /Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UICheckBox.h \
+ /Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UIAbstractCheckButton.h \
+ /Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UIRadioButton.h \
+ /Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UIImageView.h \
+ /Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UIText.h \
+ /Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UITextAtlas.h \
+ /Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UILoadingBar.h \
+ /Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UIScrollView.h \
+ /Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UIListView.h \
+ /Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UISlider.h \
+ /Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UITextField.h \
+ /Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../2d/CCTextFieldTTF.h \
+ /Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UITextBMFont.h \
+ /Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UIPageView.h \
+ /Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UIHelper.h \
+ /Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UIRichText.h \
+ /Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UIHBox.h \
+ /Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UIVBox.h \
+ /Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UIRelativeBox.h \
+ /Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UIVideoPlayer.h \
+ /Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UIWebView.h \
+ /Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UIDeprecated.h \
+ /Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UIScale9Sprite.h \
+ /Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UIEditBox/UIEditBox.h \
+ /Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UILayoutComponent.h \
+ /Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UITabControl.h \
+ /Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../editor-support/cocostudio/CocosStudioExtension.h
 
 jni/../../../Classes/AppDelegate.h:
 
@@ -1015,6 +1051,76 @@ jni/../../../Classes/AppDelegate.h:
 
 /Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../deprecated/CCDeprecated.h:
 
-jni/../../../Classes/HelloWorldScene.h:
+jni/../../../Classes/LoginScene.h:
 
-jni/PluginIAP/PluginIAP.h:
+/Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/CocosGUI.h:
+
+/Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UIWidget.h:
+
+/Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../2d/CCProtectedNode.h:
+
+/Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UILayoutParameter.h:
+
+/Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/GUIExport.h:
+
+/Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/GUIDefine.h:
+
+/Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../base/ObjectFactory.h:
+
+/Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UILayout.h:
+
+/Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UIButton.h:
+
+/Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UICheckBox.h:
+
+/Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UIAbstractCheckButton.h:
+
+/Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UIRadioButton.h:
+
+/Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UIImageView.h:
+
+/Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UIText.h:
+
+/Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UITextAtlas.h:
+
+/Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UILoadingBar.h:
+
+/Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UIScrollView.h:
+
+/Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UIListView.h:
+
+/Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UISlider.h:
+
+/Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UITextField.h:
+
+/Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../2d/CCTextFieldTTF.h:
+
+/Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UITextBMFont.h:
+
+/Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UIPageView.h:
+
+/Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UIHelper.h:
+
+/Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UIRichText.h:
+
+/Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UIHBox.h:
+
+/Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UIVBox.h:
+
+/Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UIRelativeBox.h:
+
+/Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UIVideoPlayer.h:
+
+/Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UIWebView.h:
+
+/Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UIDeprecated.h:
+
+/Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UIScale9Sprite.h:
+
+/Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UIEditBox/UIEditBox.h:
+
+/Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UILayoutComponent.h:
+
+/Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../ui/UITabControl.h:
+
+/Volumes/Data/MonkeyJunior/android_demo/mjdemo/proj.android-studio/../cocos2d/cocos/3d/../editor-support/cocostudio/CocosStudioExtension.h:

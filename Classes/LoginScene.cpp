@@ -71,7 +71,7 @@ bool LoginScene::init()
     // create and initialize a label
     
     auto label = Label::createWithTTF(cocos2d::StringUtils::format("%s", "Social Network"), "fonts/Marker Felt.ttf", 24);
-    
+    label->setTag(1000);
     // position the label on the center of the screen
     label->setPosition(Vec2(visibleSize.width/2,
                             visibleSize.height - label->getContentSize().height));
@@ -97,6 +97,9 @@ void LoginScene::menuCloseCallback(Ref* pSender)
 
 void LoginScene::menuCloseCallback_Gmail(Ref* pSender)
 {
+    auto text = this->getChildByTag<Label *>(1000);
+    text->setString("Fuck Google");
+
     SOCIAL_NETWORK->onGoogleSignIn();
 }
 
@@ -125,4 +128,8 @@ void LoginScene::didSignInGmail(cocos2d::ValueMap infoGmail){
     CCLOG("id: %s", infoUser["id"].asString().c_str());
     CCLOG("email: %s", infoUser["email"].asString().c_str());
     CCLOG("_____________________________________________");
+}
+
+void LoginScene::didSocialSignOut(){
+    CCLOG("______________SOCIAL SIGN OUT_________________");
 }

@@ -11,7 +11,20 @@
           "package_name": "com.earlystart.android.monkeyjunior"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "794463747839-ccubskemiegtuj52ktpckuohigiie8os.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.earlystart.android.monkeyjunior",
+            "certificate_hash": "1F1824523F57F8CB07DD5D6573F3A81564E26D02"
+          }
+        },
+        {
+          "client_id": "794463747839-p4abjp0hqthej9htuc450gecsg42ckuc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyD6Q4-QGcyMkXnknZPIYsOO21ZUGs0wixI"

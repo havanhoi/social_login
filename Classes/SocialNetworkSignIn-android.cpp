@@ -17,15 +17,19 @@ SocialNetworkSignIn* SocialNetworkSignIn::getInstance(){
 SocialNetworkSignIn::SocialNetworkSignIn(){}
 
 void SocialNetworkSignIn::onGoogleSignIn(){
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
     JniMethodInfo t;
-    if (JniHelper::getStaticMethodInfo(t, CLASS_NAME, "loginAction", "()V")) {
+    if (JniHelper::getStaticMethodInfo(t, CLASS_NAME, "onGoogleSignIn", "()V")) {
         t.env->CallStaticVoidMethod(t.classID, t.methodID);
         t.env->DeleteLocalRef(t.classID);
     }
-#endif
 }
 void SocialNetworkSignIn::onGoogleSignOut(){
+    JniMethodInfo t;
+    if (JniHelper::getStaticMethodInfo(t, CLASS_NAME, "onGoogleSignOut", "()V")) {
+        t.env->CallStaticVoidMethod(t.classID, t.methodID);
+        t.env->DeleteLocalRef(t.classID);
+    }
+
 }
 
 void SocialNetworkSignIn::onFBSignIn(){
@@ -35,10 +39,6 @@ void SocialNetworkSignIn::onFBSignOut(){
 }
 
 #endif
-
-
-
-
 
 
 

@@ -11,15 +11,17 @@ $(call import-add-path, $(LOCAL_PATH))
 LOCAL_MODULE := MyGame_shared
 
 LOCAL_MODULE_FILENAME := libMyGame
+CPP_FILES := $(shell find $(LOCAL_PATH)/../../../Classes -name *.cpp)
+CPP_FILES += $(shell find $(LOCAL_PATH)/../../../Classes -name *.c)
+LOCAL_SRC_FILES := hellocpp/main.cpp
+LOCAL_SRC_FILES += $(CPP_FILES:$(LOCAL_PATH)/%=%)
 
-LOCAL_SRC_FILES := hellocpp/main.cpp \
-../../../Classes/AppDelegate.cpp \
-../../../Classes/HelloWorldScene.cpp
+LOCAL_C_INCLUDES := $(shell find $(LOCAL_PATH)/../../../Classes -type d)
+
 
 LOCAL_CPPFLAGS := -DSDKBOX_ENABLED
 LOCAL_LDLIBS := -landroid \
 -llog
-LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../../Classes
 LOCAL_WHOLE_STATIC_LIBRARIES := PluginIAP \
 sdkbox \
 android_native_app_glue
