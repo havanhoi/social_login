@@ -110,20 +110,16 @@ void LoginScene::menuCloseCallback_LogOut(Ref* pSender)
     //SOCIAL_NETWORK->onGoogleSignOut();
 }
 
-void LoginScene::didSignInFacebook(cocos2d::ValueMap infoFB){
+void LoginScene::didSignInSocial(cocos2d::ValueMap info, int index){
     infoUser.clear();
-    infoUser = infoFB;
-    CCLOG("______________USERNAME FACEBOOK______________");
-    CCLOG("name: %s", infoUser["name"].asString().c_str());
-    CCLOG("id: %s", infoUser["id"].asString().c_str());
-    CCLOG("email: %s", infoUser["email"].asString().c_str());
-    CCLOG("_____________________________________________");
-}
+    infoUser = info;
+    if (index == GOOGLE_ID_SIGNIN) {//Google
+        CCLOG("______________GOOGLE SIGNIN______________");
 
-void LoginScene::didSignInGmail(cocos2d::ValueMap infoGmail){
-    infoUser.clear();
-    infoUser = infoGmail;
-    CCLOG("______________USERNAME GMAIL_________________");
+    }else if (index == FACEBOOK_ID_SIGNIN){//Facebook
+        CCLOG("______________FACEBOOK SIGNIN______________");
+
+    }
     CCLOG("name: %s", infoUser["name"].asString().c_str());
     CCLOG("id: %s", infoUser["id"].asString().c_str());
     CCLOG("email: %s", infoUser["email"].asString().c_str());
@@ -131,5 +127,5 @@ void LoginScene::didSignInGmail(cocos2d::ValueMap infoGmail){
 }
 
 void LoginScene::didSocialSignOut(){
-    CCLOG("______________SOCIAL SIGN OUT_________________");
+    CCLOG("______________SOCIAL SIGNOUT_________________");
 }

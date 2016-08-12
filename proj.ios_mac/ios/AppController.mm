@@ -240,7 +240,7 @@ didSignInForUser:(GIDGoogleUser *)user
     }
     
     auto _loginScene = dynamic_cast<LoginScene *>(Director::getInstance()->getRunningScene()->getChildByTag(183));
-    _loginScene->didSignInGmail(userInfo);
+    _loginScene->didSignInSocial(userInfo, LoginScene::SOCIAL_INDEX::GOOGLE_ID_SIGNIN);
 }
 
 - (void)signIn:(GIDSignIn *)signIn
@@ -302,7 +302,7 @@ dismissViewController:(UIViewController *)viewController {
                 }
             }
             auto _loginScene = dynamic_cast<LoginScene *>(Director::getInstance()->getRunningScene()->getChildByTag(183));
-            _loginScene->didSignInFacebook(userInfo);
+            _loginScene->didSignInSocial(userInfo, LoginScene::SOCIAL_INDEX::FACEBOOK_ID_SIGNIN);
             
         }else{
             NSLog(@"%@", result);

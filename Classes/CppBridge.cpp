@@ -3,7 +3,7 @@
 #if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
 #include "platform/android/jni/JniHelper.h"
 
-JNIEXPORT void JNICALL Java_org_cocos2dx_cpp_CppBridge_onDidGoogleSignIn(JNIEnv* env, jobject thiz, jstring personName, jstring personEmail, jstring personId)
+JNIEXPORT void JNICALL Java_org_cocos2dx_cpp_CppBridge_onDidSocialSignIn(JNIEnv* env, jobject thiz, jstring personName, jstring personEmail, jstring personId, jint index)
 {
     // your C++ code goes here
     const char * native_nameStr = env->GetStringUTFChars(personName, JNI_FALSE);
@@ -30,15 +30,14 @@ JNIEXPORT void JNICALL Java_org_cocos2dx_cpp_CppBridge_onDidGoogleSignIn(JNIEnv*
         }
     }
     auto _loginScene = dynamic_cast<LoginScene *>(Director::getInstance()->getRunningScene()->getChildByTag(183));
-    _loginScene->didSignInGmail(userInfo);
+    _loginScene->didSignInSocial(userInfo, index);
     
     env->ReleaseStringUTFChars(personName, native_nameStr);
     env->ReleaseStringUTFChars(personEmail, native_emailStr);
     env->ReleaseStringUTFChars(personId, native_idStr);
-
 }
 
-JNIEXPORT void JNICALL Java_org_cocos2dx_cpp_CppBridge_onDidGoogleSignOut(JNIEnv* env, jobject thiz){
+JNIEXPORT void JNICALL Java_org_cocos2dx_cpp_CppBridge_onDidSocialSignOut(JNIEnv* env, jobject thiz){
     auto _loginScene = dynamic_cast<LoginScene *>(Director::getInstance()->getRunningScene()->getChildByTag(183));
     _loginScene->didSocialSignOut();
 }

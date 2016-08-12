@@ -60,7 +60,7 @@ public class AppActivity extends Cocos2dxActivity {
                 String personEmail = bundle.getString("personEmail").toString();
                 String personId = bundle.getString("personId").toString();
 
-                CppBridge.onDidGoogleSignIn(personName, personEmail, personId);
+                CppBridge.onDidSocialSignIn(personName, personEmail, personId, CppBridge.Google_Id_SignIn);
                 //Toast.makeText(this.getBaseContext(), infoUser, Toast.LENGTH_SHORT).show();
             }
 
@@ -69,18 +69,14 @@ public class AppActivity extends Cocos2dxActivity {
                 String personEmail = bundle.getString("personEmail_FB").toString();
                 String personId = bundle.getString("personId_FB").toString();
 
-                CppBridge.onDidGoogleSignIn(personName, personEmail, personId);
-
+                CppBridge.onDidSocialSignIn(personName, personEmail, personId, CppBridge.Facebook_Id_SignIn);
             }
-
 
             if (bundle.getBoolean("didSignOut", false)){
                 Log.e("didSignOut", " didSignOut");
-                CppBridge.onDidGoogleSignOut();
+                CppBridge.onDidSocialSignOut();
             }
         }
-
-
         _ac = this;
     }
 
@@ -120,6 +116,5 @@ public class AppActivity extends Cocos2dxActivity {
         intent.putExtra("isSignOutFB", !isSignIn);
         startActivity(intent);
     }
-
 }
 

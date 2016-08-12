@@ -76,7 +76,7 @@ public class FBActivity extends AppCompatActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
         builder.setMessage("Do you want signout?");
-        builder.setTitle("Hoi Dep Trai");
+        builder.setTitle("Facebook");
         builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
 
             @Override
@@ -123,7 +123,7 @@ public class FBActivity extends AppCompatActivity {
                             userInfo += "user.name: " + object.getString("name").toString();
 
                             didSignInFB(object.getString("name").toString(), object.getString("id").toString(), object.getString("email").toString());
-                            logInfo();
+                            //logInfo();
                         } catch (Exception e) {
                             e.printStackTrace();
                         }

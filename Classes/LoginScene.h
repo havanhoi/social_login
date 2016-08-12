@@ -22,11 +22,15 @@ public:
     
     
     //call back delegate
-    void didSignInFacebook(cocos2d::ValueMap infoFB);
-    void didSignInGmail(cocos2d::ValueMap infoGmail);
+    void didSignInSocial(cocos2d::ValueMap info, int index);
     void didSocialSignOut();
     
     cocos2d::ValueMap infoUser;
+    
+    enum SOCIAL_INDEX {
+        GOOGLE_ID_SIGNIN = 1,
+        FACEBOOK_ID_SIGNIN = 2,
+    };
 private:
     void onEnter();
 };
