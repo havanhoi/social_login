@@ -2,4 +2,5 @@
 <resources>
     <string name="app_name">Sign-In Quickstart</string>
     <string name="server_client_id">794463747839-p4abjp0hqthej9htuc450gecsg42ckuc.apps.googleusercontent.com</string>
+    <string name="facebook_app_id">186281401544836</string>
 </resources>

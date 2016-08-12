@@ -33,9 +33,19 @@ void SocialNetworkSignIn::onGoogleSignOut(){
 }
 
 void SocialNetworkSignIn::onFBSignIn(){
+    JniMethodInfo t;
+    if (JniHelper::getStaticMethodInfo(t, CLASS_NAME, "onFacebookSignIn", "()V")) {
+        t.env->CallStaticVoidMethod(t.classID, t.methodID);
+        t.env->DeleteLocalRef(t.classID);
+    }
 }
 
 void SocialNetworkSignIn::onFBSignOut(){
+    JniMethodInfo t;
+    if (JniHelper::getStaticMethodInfo(t, CLASS_NAME, "onFacebookSignOut", "()V")) {
+        t.env->CallStaticVoidMethod(t.classID, t.methodID);
+        t.env->DeleteLocalRef(t.classID);
+    }
 }
 
 #endif

@@ -133,13 +133,11 @@ public class SocialLoginActivity extends AppCompatActivity implements
 
 
     private  void showAlertConfirmSignout() {
-
-
         AlertDialog alertDialog;
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
         builder.setMessage("Do you want signout?");
-        builder.setTitle("Hoi Dep Trai");
+        builder.setTitle("Google");
         builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
 
             @Override

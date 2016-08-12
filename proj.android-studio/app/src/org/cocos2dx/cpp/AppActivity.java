@@ -27,10 +27,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.facebook.FacebookSdk;
+import com.facebook.appevents.AppEventsLogger;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 
 import org.cocos2dx.lib.Cocos2dxActivity;
-
 
 public class AppActivity extends Cocos2dxActivity {
     static AppActivity _ac = null;
@@ -41,20 +42,20 @@ public class AppActivity extends Cocos2dxActivity {
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+        FacebookSdk.sdkInitialize(getApplicationContext());
+        AppEventsLogger.activateApp(this);
+
+
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
                 .build();
         Log.e("AppActivity", "Vao day roi");
 
-        String infoUser = "";
-
         Bundle bundle = getIntent().getExtras();
         if(bundle != null) {
             if(bundle.getString("personId") != null) {
-                infoUser += "personId: " + bundle.getString("personId").toString();
-                infoUser += " - personName: " + bundle.getString("personName").toString();
-                infoUser += " - personEmail: " + bundle.getString("personEmail").toString();
-
                 String personName = bundle.getString("personName").toString();
                 String personEmail = bundle.getString("personEmail").toString();
                 String personId = bundle.getString("personId").toString();
@@ -62,6 +63,16 @@ public class AppActivity extends Cocos2dxActivity {
                 CppBridge.onDidGoogleSignIn(personName, personEmail, personId);
                 //Toast.makeText(this.getBaseContext(), infoUser, Toast.LENGTH_SHORT).show();
             }
+
+            if(bundle.getString("personId_FB") != null) {
+                String personName = bundle.getString("personName_FB").toString();
+                String personEmail = bundle.getString("personEmail_FB").toString();
+                String personId = bundle.getString("personId_FB").toString();
+
+                CppBridge.onDidGoogleSignIn(personName, personEmail, personId);
+
+            }
+
 
             if (bundle.getBoolean("didSignOut", false)){
                 Log.e("didSignOut", " didSignOut");
@@ -75,29 +86,40 @@ public class AppActivity extends Cocos2dxActivity {
 
     public static void onGoogleSignIn() {
         Log.e(TAG, "=====> loginAction");
-        _ac.signInAction();
+        _ac.googleActionWithIsSignIn(true);
     }
-
     public static void onGoogleSignOut() {
         Log.e(TAG, "=====> loginAction");
-        _ac.signOutAction();
+        _ac.googleActionWithIsSignIn(false);
     }
 
-    public void signInAction() {
+    public void googleActionWithIsSignIn(boolean isSignIn) {
         Log.e(TAG, "=====> openLogin");
         Intent intent = new Intent(this,org.cocos2dx.cpp.SocialLoginActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_TASK_ON_HOME);
-        intent.putExtra("isSignIn", true);
+        intent.putExtra("isSignIn", isSignIn);
+        intent.putExtra("isSignOut", !isSignIn);
         startActivity(intent);
     }
 
+    public static void onFacebookSignIn() {
+        Log.e(TAG, "=====> loginAction");
+        _ac.facebookActionWithIsSignIn(true);
+    }
 
-    public void signOutAction() {
+    public static void onFacebookSignOut() {
+        Log.e(TAG, "=====> loginAction");
+        _ac.facebookActionWithIsSignIn(false);
+    }
+
+    public void facebookActionWithIsSignIn(boolean isSignIn) {
         Log.e(TAG, "=====> openLogin");
-        Intent intent = new Intent(this,org.cocos2dx.cpp.SocialLoginActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_TASK_ON_HOME);
-        intent.putExtra("isSignOut", true);
+        Intent intent = new Intent(this,org.cocos2dx.cpp.FBActivity.class);
+//        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_TASK_ON_HOME);
+        intent.putExtra("isSignInFB", isSignIn);
+        intent.putExtra("isSignOutFB", !isSignIn);
         startActivity(intent);
     }
+
 }
 

@@ -107,7 +107,7 @@ void LoginScene::menuCloseCallback_Gmail(Ref* pSender)
 void LoginScene::menuCloseCallback_LogOut(Ref* pSender)
 {
     SOCIAL_NETWORK->onFBSignOut();
-    SOCIAL_NETWORK->onGoogleSignOut();
+    //SOCIAL_NETWORK->onGoogleSignOut();
 }
 
 void LoginScene::didSignInFacebook(cocos2d::ValueMap infoFB){
